@@ -14,6 +14,7 @@ public class MotorcycleController {
     @Autowired
     private MotorcycleRepository motorcycleRepository;
 
+    // TO SAVE
     @PostMapping("/saveMotorcycle")
     public Motorcycle saveMotorcycle(@RequestBody Motorcycle motorcycle) {
         System.out.println("Motorcycle save called...");
@@ -23,6 +24,7 @@ public class MotorcycleController {
         return outMotorcycle;
     }
 
+    // TO GET
     @GetMapping("/getMotorcycle/{id}")
     public Optional<Motorcycle> getMotorcycle(@PathVariable String id) {
         System.out.println("Motorcycle get() called...");
